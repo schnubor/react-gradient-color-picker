@@ -121,6 +121,15 @@ export const useColorPicker = (value, onChange) => {
     }
   }
 
+  const setHex = (newHex) => {
+    let tinyHex = tc(newHex)
+    if (tinyHex.isValid()) {
+      let { r, g, b } = tinyHex.toRgb()
+      let newColor = `rgba(${r}, ${g}, ${b}, 1)`
+      handleChange(newColor)
+    }
+  }
+
   const setR = (newR) => {
     let newVal = formatInputValues(newR, 0, 255)
     handleChange(`rgba(${newVal}, ${g}, ${b}, ${a})`)
@@ -242,6 +251,7 @@ export const useColorPicker = (value, onChange) => {
     setDegrees,
     setSolid,
     setGradient,
+    setHex,
     setR,
     setG,
     setB,
