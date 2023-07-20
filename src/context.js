@@ -23,6 +23,7 @@ export default function PickerContextWrapper({
   onChange,
   squareSize,
   squareHeight,
+  hideOpacity
 }) {
   const offsetLeft = bounds?.x
   const isGradient = value?.includes('gradient')
@@ -49,7 +50,7 @@ export default function PickerContextWrapper({
   const [previousColors, setPreviousColors] = useState([])
   const [previousGraidents, setPreviousGradients] = useState([])
   const [inFocus, setInFocus] = useState(null)
-  const [undoLog, setUndoLog] = useState(0)
+  // const [undoLog, setUndoLog] = useState(0)
 
   const internalOnChange = (newValue) => {
     if (newValue !== value) {
@@ -167,7 +168,7 @@ export default function PickerContextWrapper({
       window.removeEventListener('click', handleClickFocus)
       // window.removeEventListener('keydown', handleKeyboard)
     }
-  }, [inFocus, value, undoLog])
+  }, [inFocus, value])
 
   const handleClickFocus = (e) => {
     let formattedPath = e?.path?.map((el) => el.id)
@@ -209,6 +210,7 @@ export default function PickerContextWrapper({
     isGradient,
     offsetLeft,
     squareSize,
+    hideOpacity,
     handleColor,
     currentLeft,
     deletePoint,

@@ -56,12 +56,17 @@ function MyApp() {
 | hideInputs          | `boolean`    | `false`                 | (optional) hide the hex and rgba inputs                                   |
 | hideOpacity         | `boolean`    | `false`                 | (optional) hide the opacity bar                                           |
 | hideHue             | `boolean`    | `false`                 | (optional) hide the hue bar                                               |
-| hideControls        | `boolean`    | `false`                 | (optional) hide the solid/gradient and gradient options                   |
+| hideControls        | `boolean`    | `false`                 | (optional) hide the entire top row of various control btns                |
+| hideColorTypeBtns   | `boolean`    | `false`                 | (optional) hide the solid/gradient buttons                                |
 | hidePresets         | `boolean`    | `false`                 | (optional) hide the preset color options                                  |
 | hideEyeDrop         | `boolean`    | `false`                 | (optional) hide (and disable the eye dropper tool                         |
 | hideAdvancedSliders | `boolean`    | `false`                 | (optional) hide the additional sliders (saturation, luminence, brightness |
 | hideColorGuide      | `boolean`    | `false`                 | (optional) hide the color guide, a tool that shows color pairings         |
 | hideInputType       | `boolean`    | `false`                 | (optional) hide the input type selector, looking the type                 |
+| hideGradientType    | `boolean`    | `false`                 | (optional) hide the linear/circular gradient type toggle (only relevant in gradient mode)|
+| hideGradientAngle   | `boolean`    | `false`                 | (optional) hide the gradient angle input (only relevant in gradient mode with a linear gradient)|
+| hideGradientStop    | `boolean`    | `false`                 | (optional) hide the gradient point stop input (only relevant in gradient mode)|
+| hideGradientControls| `boolean`    | `false`                 | (optional) hide the all gradient controls (the bar that appears below top controls when in gradient mode)|
 | presets             | `array`      | ['rgba(0,0,0,1)', ...]  | (optional) pass in custom preset options ['rgba()', 'rgba()', ..]         |
 
 ### API
@@ -378,3 +383,7 @@ Code released under the [MIT](https://github.com/hxf31891/react-gradient-color-p
 [downloads-url]: http://npm-stat.com/charts.html?package=react-best-gradient-color-picker
 [npm-version-image]: https://img.shields.io/npm/v/react-best-gradient-color-picker.svg?color=%23498af2
 [npm-version-url]: https://www.npmjs.com/package/react-best-gradient-color-picker
+
+## Acknowledgments
+
+Very special thank you to [Rafael Carício](https://github.com/rafaelcaricio) for his amazing work parsing gradient strings.
